@@ -1,6 +1,13 @@
 ---
 import { Image } from "@astrojs/image/components";
-import { FaHome, FaTwitter, FaYoutube } from "react-icons/fa/index.js";
+import {
+  FaDiscord,
+  FaGithub,
+  FaHome,
+  FaTwitch,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa/index.js";
 import Head from "../components/Head.astro";
 import LinkCard from "../components/LinkCard.astro";
 ---
@@ -37,6 +44,24 @@ import LinkCard from "../components/LinkCard.astro";
         title="Twitter"
         icon={FaTwitter}
         color="#1DA1F2"
+      />
+      <LinkCard
+        href="https://twitch.tv/ToastedDev"
+        title="Twitch"
+        icon={FaTwitch}
+        color="#9146FF"
+      />
+      <LinkCard
+        href="https://github.com/ToastedDev"
+        title="GitHub"
+        icon={FaGithub}
+        color="#000"
+      />
+      <LinkCard
+        href="https://toastify.tk/discord"
+        title="Discord"
+        icon={FaDiscord}
+        color="#5865F2"
       />
     </main>
   </body>
