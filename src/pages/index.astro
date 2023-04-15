@@ -1,12 +1,23 @@
 ---
-import { FaTwitter } from "react-icons/fa/index.js";
+import { Image } from "@astrojs/image/components";
 import Head from "../components/Head.astro";
+import LinkCard from "../components/LinkCard.astro";
 ---
 
 <html lang="en">
   <Head />
-  <body>
-    <h1>Astro</h1>
-    <FaTwitter />
+  <body class="mt-16 flex flex-col items-center px-8">
+    <header class="flex flex-col items-center">
+      <Image
+        src="/toastedtoast.jpg"
+        alt="Toastify Logo"
+        format="webp"
+        width={96}
+        height={96}
+        class="rounded-full"
+      />
+      <h1 class="mb-8 mt-4 text-xl font-bold">ToastedToast</h1>
+    </header>
+    <LinkCard href="https://toastify.tk" title="Website" />
   </body>
 </html>
