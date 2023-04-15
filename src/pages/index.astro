@@ -1,5 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
+import { FaYoutube } from "react-icons/fa/index.js";
 import Head from "../components/Head.astro";
 import LinkCard from "../components/LinkCard.astro";
 ---
@@ -18,6 +19,18 @@ import LinkCard from "../components/LinkCard.astro";
       />
       <h1 class="mb-8 mt-4 text-xl font-bold">ToastedToast</h1>
     </header>
-    <LinkCard href="https://toastify.tk" title="Website" />
+    <main class="flex w-full flex-col items-center">
+      <LinkCard
+        href="https://toastify.tk"
+        title="Website"
+        image="https://toastify.tk/toaster.png"
+      />
+      <LinkCard
+        href="https://youtube.com/@ToastedToast"
+        title="YouTube"
+        icon={FaYoutube}
+        color="#f00"
+      />
+    </main>
   </body>
 </html>
