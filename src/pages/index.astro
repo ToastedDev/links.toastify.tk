@@ -1,6 +1,8 @@
 ---
 import { Image } from "@astrojs/image/components";
+import { BsPinAngleFill } from "react-icons/bs/index.js";
 import {
+  FaCamera,
   FaDiscord,
   FaGithub,
   FaHome,
@@ -10,6 +12,7 @@ import {
 } from "react-icons/fa/index.js";
 import Head from "../components/Head.astro";
 import LinkCard from "../components/LinkCard.astro";
+import LinksContainer from "../components/LinksContainer.astro";
 ---
 
 <html lang="en">
@@ -26,43 +29,53 @@ import LinkCard from "../components/LinkCard.astro";
       />
       <h1 class="mb-8 mt-4 text-xl font-bold">ToastedToast</h1>
     </header>
-    <main class="flex w-full flex-col items-center">
-      <LinkCard
-        href="https://toastify.tk"
-        title="Website"
-        icon={FaHome}
-        color="#000"
-      />
-      <LinkCard
-        href="https://youtube.com/@ToastedDev"
-        title="YouTube"
-        icon={FaYoutube}
-        color="#f00"
-      />
-      <LinkCard
-        href="https://twitter.com/ToastedDev"
-        title="Twitter"
-        icon={FaTwitter}
-        color="#1DA1F2"
-      />
-      <LinkCard
-        href="https://twitch.tv/ToastedDev"
-        title="Twitch"
-        icon={FaTwitch}
-        color="#9146FF"
-      />
-      <LinkCard
-        href="https://github.com/ToastedDev"
-        title="GitHub"
-        icon={FaGithub}
-        color="#000"
-      />
-      <LinkCard
-        href="https://toastify.tk/discord"
-        title="Discord"
-        icon={FaDiscord}
-        color="#5865F2"
-      />
+    <main class="w-full">
+      <LinksContainer title="Pinned" icon={BsPinAngleFill}>
+        <LinkCard
+          href="https://www.youtube.com/playlist?list=PLLeUdIoKbA7IddkOvTZTlArtEH8rdONcl"
+          title="Talking to a camera"
+          icon={FaCamera}
+          color="#000"
+        />
+      </LinksContainer>
+      <LinksContainer>
+        <LinkCard
+          href="https://toastify.tk"
+          title="Website"
+          icon={FaHome}
+          color="#000"
+        />
+        <LinkCard
+          href="https://youtube.com/@ToastedDev"
+          title="YouTube"
+          icon={FaYoutube}
+          color="#f00"
+        />
+        <LinkCard
+          href="https://twitter.com/ToastedDev"
+          title="Twitter"
+          icon={FaTwitter}
+          color="#1DA1F2"
+        />
+        <LinkCard
+          href="https://twitch.tv/ToastedDev"
+          title="Twitch"
+          icon={FaTwitch}
+          color="#9146FF"
+        />
+        <LinkCard
+          href="https://github.com/ToastedDev"
+          title="GitHub"
+          icon={FaGithub}
+          color="#000"
+        />
+        <LinkCard
+          href="https://toastify.tk/discord"
+          title="Discord"
+          icon={FaDiscord}
+          color="#5865F2"
+        />
+      </LinksContainer>
     </main>
   </body>
 </html>
