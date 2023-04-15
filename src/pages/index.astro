@@ -29,7 +29,7 @@ import LinksContainer from "../components/LinksContainer.astro";
       />
       <h1 class="mb-8 mt-4 text-xl font-bold">ToastedToast</h1>
     </header>
-    <main class="w-full">
+    <main class="flex w-full flex-col gap-1">
       <LinksContainer title="Pinned" icon={BsPinAngleFill}>
         <LinkCard
           href="https://www.youtube.com/playlist?list=PLLeUdIoKbA7IddkOvTZTlArtEH8rdONcl"
@@ -38,6 +38,9 @@ import LinksContainer from "../components/LinksContainer.astro";
           color="#000"
         />
       </LinksContainer>
+      <div class="flex w-full flex-col items-center">
+        <span class="mb-3 h-0.5 w-1/5 bg-white"></span>
+      </div>
       <LinksContainer>
         <LinkCard
           href="https://toastify.tk"
